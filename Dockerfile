@@ -9,7 +9,7 @@ RUN conda install --quiet --yes -c https://conda.binstar.org/pymc pymc && \
     conda remove --quiet --yes --force qt pyqt && \
 	conda clean -tipsy
 
-RUN conda install --quiet --yes -c https://conda.binstar.org/pymc pymc -p $CONDA_DIR/envs/python2 python=2.7 && \
+RUN conda install --quiet --yes -c https://conda.binstar.org/pymc -p $CONDA_DIR/envs/python2 python=2.7 'pymc' && \
     conda remove -n python2 --quiet --yes --force qt pyqt && \
 	conda clean -tipsy
 
